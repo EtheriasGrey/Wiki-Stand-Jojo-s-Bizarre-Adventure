@@ -43,6 +43,7 @@ function Start(){
 
     bypart = true;
     byalph = false;
+    document.getElementById("SearchInput").value = '';
     document.getElementById('FilterByPart').style.color = '#008000';
     document.getElementById('FilterByAlph').style.color = '#000000';
 
