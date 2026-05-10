@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jojo's Bizarre Adventure Stands</title>
+<link rel="stylesheet" href="styleshit.css"></link>
+<script src="code.js"></script>
+</head>
+<body onload="Start()">
+<h1>Jojo's Bizarre Adventure Stands</h1>
+<section class="filter">
+    <input type="button" id="FilterButton" value="Filter" onclick="OpenFilters()">
+</section>
+
+<section class="searchtext">
+    <label for="SearchInput">Search : </label>
+    <input type="text" id="SearchInput">
+</section>
+<br>
+<section class="filterbypart" id="Parts">   
+    <input type="button" id="Part3" value="Part 3" onclick="PartFilter('Part3')">
+    <input type="button" id="Part4" value="Part 4" onclick="PartFilter('Part4')">
+    <input type="button" id="Part5" value="Part 5" onclick="PartFilter('Part5')">
+    <input type="button" id="Part6" value="Part 6" onclick="PartFilter('Part6')">
+    <input type="button" id="Part7" value="Part 7" onclick="PartFilter('Part7')">
+    <input type="button" id="Part8" value="Part 8" onclick="PartFilter('Part8')">
+    <input type="button" id="Part9" value="Part 9" onclick="PartFilter('Part9')">
+    <input type="button" id="FilterByAlph" value="by alphabetical order" onclick="ByOrder()">
+    <input type="button" id="FilterByPart" value="by Part" onclick="ByPart()">
+</section>
+
+<section class="getstand">
+    <input type="button" id="getstandbutton" value="Stab yourself with the arrow" onclick="GetMyStand()">
+</section>
+
+<section class="DisplayStands" id="DisplayZone">
+
+</section>
+
+</body>
+</html>
