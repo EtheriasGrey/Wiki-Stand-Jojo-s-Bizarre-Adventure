@@ -122,7 +122,7 @@ function DisplaySortedStandList(){
         let s = StandsToDisplay[i];
         let n = s.standname;
         let p = s.standpart;
-        let stando = document.createElement("dev");
+        let stando = document.createElement("div");
         // stando.setAttribute("href","https://jojowiki.com/");
         stando.setAttribute("id",`standnb${i}`);
         let img = document.createElement("img");
