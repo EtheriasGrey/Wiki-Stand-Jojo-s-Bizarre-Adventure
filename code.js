@@ -44,7 +44,7 @@ function Start(){
     bypart = true;
     byalph = false;
     document.getElementById("SearchInput").value = '';
-    document.getElementById('FilterByPart').style.color = '#008000';
+    document.getElementById('FilterByPart').style.color = 'rgb(149,0,255)';
     document.getElementById('FilterByAlph').style.color = '#000000';
 
     AllStands = [];
@@ -122,17 +122,19 @@ function DisplaySortedStandList(){
         let s = StandsToDisplay[i];
         let n = s.standname;
         let p = s.standpart;
-        let stando = document.createElement("div");
+        let stando = document.createElement("dev");
+        // stando.setAttribute("href","https://jojowiki.com/");
         stando.setAttribute("id",`standnb${i}`);
         let img = document.createElement("img");
         img.setAttribute("class","standimage");
         img.setAttribute("src",`StandsImages/Part${p}/${n}.png`);
-        stando.appendChild(img);
         let br = document.createElement("br");
-        stando.appendChild(br);
-        let name = document.createElement("a");
+        let name = document.createElement("p");
         name.setAttribute("class","standname");
         name.append(`${s.standname}`);
+        stando.style.paddingBottom = "50px";
+        let link = document.createElement("a");
+        stando.appendChild(img);
         stando.appendChild(name);
         container.appendChild(stando);
     }
@@ -159,30 +161,20 @@ function getPart(part){
 }
 
 function Contain(name,str){
-    let n = ToLowerCase(name);
-    let s = ToLowerCase(str);
+    let n = name.toLowerCase();
+    let s = str.toLowerCase();
     let j = 0;
     for(let i = 0; i < n.length;i++){
         if(n[i] == s[j]){
             j++;
             if(j == s.length) return true;
         }
+        else if(j != 0){
+            i -= j;
+            j = 0;
+        }
     }
     return false;
-}
-
-function ToLowerCase(str){
-    let res = '';
-    for(let i = 0;i < str.length;i++){
-        let l = str[i];
-        if(l >= 'A' && l <= 'Z'){
-            res += l.toLowerCase();
-        }
-        else{
-            res += l;
-        }
-    }
-    return res;
 }
 
 function OpenFilters(){
@@ -197,7 +189,7 @@ function OpenFilters(){
 
 function ByOrder(){
     if(!byalph){
-        document.getElementById('FilterByAlph').style.color = '#008000';
+        document.getElementById('FilterByAlph').style.color = 'rgb(149,0,255)';
         document.getElementById('FilterByPart').style.color = '#000000';
         byalph = true;
         bypart = false;
@@ -207,7 +199,7 @@ function ByOrder(){
 
 function ByPart(){
     if(!bypart){
-        document.getElementById('FilterByPart').style.color = '#008000';
+        document.getElementById('FilterByPart').style.color = 'rgb(149,0,255)';
         document.getElementById('FilterByAlph').style.color = '#000000';
         byalph = false;
         bypart = true;
@@ -224,7 +216,7 @@ function PartFilter(Part){
                 part3 = false;
             }
             else{
-                document.getElementById('Part3').style.color = '#008000';
+                document.getElementById('Part3').style.color = 'rgb(149,0,255)';
                 part3 = true;
             }
             break;
@@ -234,7 +226,7 @@ function PartFilter(Part){
                 part4 = false;
             }
             else{
-                document.getElementById('Part4').style.color = '#008000';
+                document.getElementById('Part4').style.color = 'rgb(149,0,255)';
                 part4 = true;
             }
             break;
@@ -244,7 +236,7 @@ function PartFilter(Part){
                 part5 = false;
             }
             else{
-                document.getElementById('Part5').style.color = '#008000';
+                document.getElementById('Part5').style.color = 'rgb(149,0,255)';
                 part5 = true;
             }
             break;
@@ -254,7 +246,7 @@ function PartFilter(Part){
                 part6 = false;
             }
             else{
-                document.getElementById('Part6').style.color = '#008000';
+                document.getElementById('Part6').style.color = 'rgb(149,0,255)';
                 part6 = true;
             }
             break;
@@ -264,7 +256,7 @@ function PartFilter(Part){
                 part7 = false;
             }
             else{
-                document.getElementById('Part7').style.color = '#008000';
+                document.getElementById('Part7').style.color = 'rgb(149,0,255)';
                 part7 = true;
             }
             break;
@@ -274,7 +266,7 @@ function PartFilter(Part){
                 part8 = false;
             }
             else{
-                document.getElementById('Part8').style.color = '#008000';
+                document.getElementById('Part8').style.color = 'rgb(149,0,255)';
                 part8 = true;
             }
             break;
@@ -284,7 +276,7 @@ function PartFilter(Part){
                 part9 = false;
             }
             else{
-                document.getElementById('Part9').style.color = '#008000';
+                document.getElementById('Part9').style.color = 'rgb(149,0,255)';
                 part9 = true;
             }
             break;

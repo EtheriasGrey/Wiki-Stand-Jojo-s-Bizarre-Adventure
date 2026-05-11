@@ -1,10 +1,11 @@
 body{
-    background-color: rgb(220, 220, 220);
+    background-image: url("Background/KiraBackground.png");
 }
 
 h1{
     text-align: center;
     text-decoration: underline;
+    color: rgb(253, 221, 126);
 }
 
 .searchtext{
@@ -15,6 +16,13 @@ h1{
 
 .searchtext > input{
     width: 60%;
+    color: rgb(149,0,255);
+    font-size: 100%;
+}
+
+.searchtext > label{
+    color: rgb(245, 245, 245);
+    font-size: 120%;
 }
 
 .filter{
@@ -26,10 +34,20 @@ h1{
 
 .filter > input{
     width: 200%;
+    color: rgb(149,0,255);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0);
+    font-size: 100%;
 }
 
 .filterbypart {
     padding-left: 8%;
+}
+
+.filterbypart > input {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0);
+    font-size: 80%;
 }
 
 .DisplayStands{
@@ -37,22 +55,60 @@ h1{
     padding-right: 15%;
 }
 
-.DisplayStands > div{
-    display: inline-block;
+/* .DisplayStands > a:link{
+    display: inline-flex;
+    flex-direction: column;
+    padding-bottom: 50px;
     margin: 10%;
     align-items: center;
     width: 150px;
     font-size: 150%;
     height: 200px;
+    text-align: center;
+    border: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    box-shadow: 0 30px 30px rgba(0,0,0,0.8);
+    background-color: rgba(255,255,255,0.8);
+    color: rgb(0,0,0);
+    text-decoration: none;
 }
+
+.DisplayStands > a:visited{
+    display: inline-flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    margin: 10%;
+    align-items: center;
+    width: 150px;
+    font-size: 150%;
+    height: 200px;
+    text-align: center;
+    border: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    box-shadow: 0 30px 30px rgba(0,0,0,0.8);
+    background-color: rgba(255,255,255,0.8);
+    color: rgb(0,0,0);
+    text-decoration: none;
+}
+
+.DisplayStands > a:hover{
+    transition: 0.2s;
+    transform: scale(1.05);
+    transform: translateY(-5px);
+} */
 
 .standimage{
     width: 150px;
     height: 150px;
+    display: block;
+    margin: 0%;
 }
 
 .standname{
-    
+    display: block;
+    margin-top: 5px;
 }
 
 .getstand{
@@ -61,4 +117,34 @@ h1{
 
 .getstand > input{
     font-size: 180%;
+    color: rgb(255, 205, 60);
+    background-color: rgb(55, 35, 85);
+}
+
+
+/* To Remove Later !!!!!!!!!!!!!!!!!!!!!!!!!  */
+
+.DisplayStands > dev{
+    display: inline-flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    margin: 10%;
+    align-items: center;
+    width: 150px;
+    font-size: 150%;
+    height: 200px;
+    text-align: center;
+    border: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    box-shadow: 0 30px 30px rgba(0,0,0,0.8);
+    background-color: rgba(255,255,255,0.8);
+    color: rgb(0,0,0);
+    text-decoration: none;
+}
+
+.DisplayStands > dev:hover{
+    transition: 0.2s;
+    transform: scale(1.05);
+    transform: translateY(-5px);
 }
